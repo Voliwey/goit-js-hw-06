@@ -17,18 +17,23 @@ const createBoxes = (amount) => {
   }
   return divToAdd;
 };
+
+
 const destroyBoxes = () => {
   boxesEl.innerHTML = "";
   inputEl.value = "";
 };
 
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
+
 
 btnCreateEl.addEventListener("click", () => {
   let boxesToAdd = createBoxes(inputEl.value);
   boxesEl.append(...boxesToAdd);
 });
+
 
 btnDestroyEl.addEventListener("click", destroyBoxes);

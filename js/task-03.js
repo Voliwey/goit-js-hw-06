@@ -14,7 +14,7 @@ const images = [
 ];
 
 
-const queryListByClass = document.querySelector(".gallery")
+const queryListByClassEl = document.querySelector(".gallery")
 
 function createMarkup(arr) {
 const markup = arr.map(({url,alt}) => 
@@ -23,7 +23,7 @@ const markup = arr.map(({url,alt}) =>
 </li>`).join("")
 
   
-queryListByClass.insertAdjacentHTML("beforeend", markup)
+queryListByClassEl.insertAdjacentHTML("beforeend", markup)
 }
 
 createMarkup(images)
